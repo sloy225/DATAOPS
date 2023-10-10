@@ -25,6 +25,7 @@ def extract_model(data):
     
     selected_columns = ["Sex", "Pclass", "Age", "Survived", "Fare", "Embarked"]
     data_subset = data[selected_columns]
+    data_subset = data_subset.dropna()
     print(data_subset)
     # Renommage la colonne "fare" en "price" et "Pclass" en "Class"
     data_subset.columns = ['sex', 'class', 'age', 'survived', 'price', 'embarked']
